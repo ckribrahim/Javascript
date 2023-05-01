@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Literals</title>
+</head>
+<body>
+    
+    
+
+    <script>
+        //Backtick ile birden fazla satir deger iceren String degerler olusturulabilir
+        let salary = "$3000";
+        let name = "Bravo 6";
+        let company = "Special Air Service";
+        //const message = name + ", " +company + " sirketinde aylik " +salary + " maasla ise basladi.";
+        const message = `${name},  ${company}'de aylik ${salary} maasla ise basladi`;
+        alert(message);
+
+               // Eskiden string interpolation bu şekildeydi
+               let html = '<div class="card">';
+            html = html + '<div class="card-body">Hello</div>';
+            html = html + '</div>';
+            document.write(html);
+            let html2 = '<div class="card">' +
+             '<div class="card-body">' + company + '</div>' +
+             '</div>';
+            document.write(html2);
+            // ARtık böyle kolayca yapılıyor
+            const newHtml = `
+                <div>
+                    <h2>Title       X</h2>
+                    <p>${company}</p>    
+                </div>
+,            `; 
+            document.write(newHtml);
+
+
+
+    </script>
+</body>
+</html>
