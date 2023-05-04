@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case </title>
+</head>
+<body>
+
+    <input type="number" id="txt" placeholder="Type the price">
+    <button onclick="setPrice()">Calculate</button>
+
+    <h2 id="result"></h2>
+    
+
+    <script>
+        function setPrice(){
+            const txtPrice = document.querySelector("#txt");
+            let rslt = txtPrice.value;
+            let discount;
+
+
+            switch(true){
+                case rslt > 1500:
+                discount = 15;
+                break;
+
+                case rslt > 1000:
+                discount = 13;
+                break;
+
+                case rslt > 700:
+                   discount = 10;
+                   break;
+                case rslt > 500:
+                discount = 7;
+                break;  
+
+                case rslt > 300:
+                    discount = 5;
+                    break;
+                default: 
+                    discount = 2;
+            }
+           rslt -= rslt * discount / 100;
+           document.querySelector("#result").innerHTML = rslt;
+        }
+
+    </script>
+</body>
+</html>
