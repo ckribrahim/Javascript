@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nullish Coalescing</title>
+</head>
+<body>
+
+    <script>
+        let salary=5000;
+
+        alert(salary ?? 15000);
+
+        // nullish sadece null ve undefined da ikinci duruma girer
+        salary ?? alert("Salary is null");
+
+        
+        // ternary version
+        alert(salary !== null && salary !== undefined ? salary : 15000);
+        // if version
+     
+        if(salary !== null && salary !== undefined) {
+            alert(salary);
+        }
+
+        // short circuit
+        salary || alert("Bos gecilmez")
+
+    </script>
+    
+</body>
+</html>

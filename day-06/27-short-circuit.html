@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short - Circuit</title>
+</head>
+<body>
+
+    <script>
+
+        // && 
+
+        const x = 5;
+        const y = 4;
+        const z = 13;
+
+
+        console.log( x > y && y > z && y ==4)
+        console.log(x > y && z > y && y)
+        console.log(x > y && y > z && y);
+
+        // short circuit 
+        z > 5 && z < 25 && alert("Bravo Six")
+
+        // if ile yapilmis hali
+
+        if(z>5 && z<25){
+            alert("Bravo Six")
+        }
+        
+
+       // ||
+
+       console.log(z<y || y>z || y>z)
+       console.log(z<y || y>z || z)
+
+       // short circuit 
+       
+       y === 35 || alert("Moscow never sleeps")
+
+
+    </script>
+    
+</body>
+</html>
