@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        const person = {
+            firstName: "Cpt",
+            lastName: "Grey",
+        }
+
+        const prcPerson = person;
+        prcPerson.firstName = "Price";
+        prcPerson.lastName = "Cpt";
+
+        console.log(person);
+        console.log(prcPerson)
+        console.log(person === prcPerson)
+
+        const ghstPerson = Object.create(person);
+        ghstPerson.firstName = "Ghst";
+        ghstPerson.lastName = "Cpt";
+        console.log(ghstPerson)
+
+        console.log(person === ghstPerson)
+    </script>
+</body>
+</html>

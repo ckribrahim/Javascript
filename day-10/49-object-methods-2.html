@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Methods</title>
+</head>
+<body>
+    
+
+    <script>
+        const car1 = {
+            brand: "Audi",
+            model: "A4",
+            year: 2020,
+            color: "red",
+            model: "A7"
+        }
+        const car2 ={
+            brand: "Mercedes",
+            model: "S63",
+          
+            color: "black"
+        }
+        Object.assign(car1, car2);
+        console.log(car1);
+        console.log(car1 === car2)
+
+        // Bir nesneden tamamen bagimsiz yeni bir nesne olusturmak icin
+        // yani kopya olusturmak icin (shallow copy) Object.assingn kullanilir
+
+        const car3 = Object.assign({}, car1);
+        console.log(car3)
+       
+    </script>
+</body>
+</html>
