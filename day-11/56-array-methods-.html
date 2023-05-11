@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        const cars = ["Porche", "Audi", "Mercedes", "BMW"];
+        console.log(cars);
+
+        let arrLength = cars.push("Bugatti");
+        console.log(arrLength);
+        console.log(cars);
+
+        // Son eleman siler
+        let elmnt = cars.pop();
+        console.log(elmnt);
+
+        // ilk eleman siler
+        cars.shift();
+        console.log(cars)
+
+        // ilk siraya eleman ekler
+        cars.unshift("Tesla");
+        console.log(cars)
+
+        // sona eleman ekler
+        cars.push("A7");
+        console.log(cars)
+
+
+        cars.sort();
+        console.log(cars);
+
+
+        cars.reverse();
+        console.log(cars);
+
+        // ilk index hangi indexi silecek,
+        // ikinci index kac tane silecek
+        // ucuncusu eklenecekler;
+
+        cars.splice(0, 1, "Mclaren", "Mustang");
+        console.log(cars)
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

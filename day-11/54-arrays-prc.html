@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Practise</title>
+</head>
+<body>
+
+    <h3 id="arrPrices"></h3>
+    <button id="btnGetPrices">Get Prices</button>
+    <h4 id="arrNewPrices"></h4>
+
+
+
+
+    <script>
+        const arr = [450, 658, 250, 3500, 7850];
+const arrPricesEl = document.querySelector("#arrPrices");
+const btnGetPrices = document.querySelector("#btnGetPrices");
+const arrNewPricesEl = document.querySelector("#arrNewPrices");
+arrPricesEl.innerHTML = arr;
+btnGetPrices.addEventListener("click", () => {
+   const result = setPrices(arr,10);
+   if(result){
+    arrNewPricesEl.innerHTML = result;
+   } 
+   else{
+    alert("Please send an array and a rate");
+   }
+});
+//const arr = [450, 658, 250, 3500, 7850];
+const setPrices = (arr, rate) =>{
+    if(!arr || !Array.isArray(arr) || arr.length<=0 ) return false;
+    if(!rate || isNaN(rate)) return false;
+    const newArr = Object.assign([], arr);
+    for(let i=0; i<newArr.length; i++){
+        newArr[i] = newArr[i] + newArr[i] * rate / 100;
+    }
+    return newArr;
+}
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

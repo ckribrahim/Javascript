@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+
+    <h3 id="myArr"></h3>
+    <button id="maxNum">Get Greatest Number</button>
+    <h4 id="greatestNum"></h4>
+
+
+
+    <script>
+
+        const myArr = document.querySelector("#myArr");
+        const maxNum = document.querySelector("#maxNum");
+        const greatestNum = document.querySelector("#greatestNum");
+
+       
+
+        let nums = [49,8,9,11,13,47];
+
+       
+
+        myArr.innerHTML = nums;
+
+        maxNum.addEventListener("click", ()=>{
+            greatestNum.innerText = getmaxNumber(nums);
+        });
+
+        const getmaxNumber = (arr) =>{
+            if(!arr || !Array.isArray(arr) || arr.length<=0) return false;
+            let maxNumber = nums[0];
+
+            for(let i=1; i<nums.length; i++){
+            if(nums[i]>maxNum){
+                maxNumber = nums[i];
+            }
+        }
+          return maxNumber;
+
+        }
+
+       
+
+        
+    </script>
+    
+</body>
+</html>
