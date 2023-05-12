@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Practise</title>
+</head>
+<body>
+
+    <ul>
+        <li id="tl"></li>
+        <li id="usd"></li>
+        <li id =eu></li>
+    </ul>
+
+
+
+
+
+    <script>
+
+        const tlpriceList = [24000, 60000, 42000, 36000, 24500, 13250];
+        const usd = 21.79;
+        const eu = 23.53;
+
+        const euPriceList = tlpriceList.map((price)=>  (price / eu).toFixed(2));
+        const usdPriceList = tlpriceList.map((price)=>  (price / usd).toFixed(2));
+
+        document.querySelector("#tl").innerHTML = tlpriceList.join("-");
+        document.querySelector("#usd").innerHTML = usdPriceList.join("-");
+        document.querySelector("#eu").innerHTML = euPriceList.join("-");
+            
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>
