@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+
+    <h1 id="txt">Welcome to My App</h1>
+    <article>
+
+    </article>
+
+    <p class="contact">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+         Illum saepe maxime laboriosam ut, aspernatur beatae
+        optio facilis laudantium doloribus tenetur mollitia 
+        veniam rem accusantium, facere molestiae quasi minima odio
+        porro.
+    </p>
+
+    <script>
+        const txt = document.getElementById("txt");
+        txt.innerHTML += "."
+
+        // getElementsByTagName her zaman dizi doner.!
+        const articleEl = document.getElementsByTagName("article");
+        articleEl[0].innerHTML += "Hello";
+
+
+        const contactEls = document.getElementsByClassName("contact");
+        contactEls[0].innerHTML += " Hi there";
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
